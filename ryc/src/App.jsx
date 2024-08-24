@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   const [resust, setResult] = useState('')
   return (
       <div className='App'>
-        <h1> MERN RENDER</h1>
+        <h1> REnder </h1>
+        <Navbar />
 
-        <button onClick={async() => {
+        <Footer />
+        {/* <button onClick={async() => {
           const res = await fetch('http://localhost:3000/ping')
           const data = await res.json()
           console.log(data)
@@ -20,7 +26,9 @@ function App() {
           {
             JSON.stringify(resust,null,2)
           }
-        </pre>
+        </pre> */}
+
+
 
       </div>
   )

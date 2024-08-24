@@ -1,0 +1,96 @@
+/* Slider.module.css */
+
+/* Contenedor principal del slider */
+.sliderContainer {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	position: relative; /* Asegura que las flechas se posicionen correctamente */
+  }
+  
+  /* Contenedor de las tarjetas */
+  .slider {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Tarjeta */
+  .card {
+	width: 300px; /* Ajusta el ancho de cada tarjeta */
+	height: 400px; /* Ajusta la altura de cada tarjeta */
+	margin: 0 20px; /* Añade espacio entre las tarjetas */
+	border: 1px solid #ccc;
+	border-radius: 10px; /* Borde redondeado */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+	overflow: hidden;
+	transition: transform 0.3s ease;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  /* Escala de la tarjeta activa */
+  .card.active {
+	transform: scale(1.05); /* Aumenta el tamaño de la tarjeta activa */
+  }
+  
+  .cardContent {
+	padding: 1rem;
+	text-align: center;
+  }
+  
+  .cardContent h3 {
+	margin: 0.5rem 0;
+  }
+  
+  .cardContent p {
+	font-size: 0.9rem;
+	color: #666;
+  }
+  
+  .cardContent span {
+	display: block;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+	color: #333;
+  }
+  
+  .image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+  }
+  
+  /* Flechas */
+  .arrow {
+	font-size: 24px;
+	background-color: rgba(8, 0, 0, 0.5);
+	padding: 1rem;
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	border: none;
+	color: white;
+	background: #333;
+	border-radius: 50%;
+	display: none; /* Las flechas están ocultas por defecto */
+  }
+  
+  /* Mostrar las flechas cuando el usuario pase el cursor sobre el slider */
+  .sliderContainer:hover .arrow {
+	display: flex;
+  }
+  
+  .arrow:nth-of-type(1) {
+	left: 10px; 
+  }
+  
+  .arrow:nth-of-type(2) {
+	right: 10px; 
+  }
+  
