@@ -3,14 +3,14 @@
 
 import express,{ Request,Response } from "express";
 import helloRouter from "./HelloRoutes";
-import { LogInfo } from "@/utils/logger";
+import { LogInfo } from "../utils/logger";
 
 let server = express();
 let rootRouter = express.Router();
 
 rootRouter.get('/', (req: Request, res: Response) =>{
     LogInfo('GET: http://localhost:3000/api/');
-    res.send('Hello sex!');
+    res.send('Funca!');
 });
 
 //redirections to Routes
